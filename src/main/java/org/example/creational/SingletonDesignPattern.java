@@ -6,6 +6,9 @@ public final class SingletonDesignPattern {
 
     private  SingletonDesignPattern(){
         System.out.println("Instance created");
+        //to handle reflection
+        if(singletonDesignPattern != null)
+            throw new RuntimeException("Please use getInstance method for object creation");
     }
 
     public static  SingletonDesignPattern getInstance(){
